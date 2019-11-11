@@ -109,7 +109,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    func handleTap(_ gestureRecognize: UIGestureRecognizer) {
+    @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         if scnView.technique == nil {

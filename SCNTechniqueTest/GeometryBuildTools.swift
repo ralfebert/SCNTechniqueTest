@@ -110,10 +110,10 @@ class GeometryBuildTools {
 
     static func buildGeometryWithColor(_ geometry:SCNGeometry, color:vector_float4) -> SCNGeometry {
 
-        let indexElement = geometry.geometryElement(at: 0)
+        let indexElement = geometry.element(at: 0)
 
-        let vertexSource = geometry.getGeometrySources(for: SCNGeometrySource.Semantic.vertex).first!
-        let normalSource = geometry.getGeometrySources(for: SCNGeometrySource.Semantic.normal).first!
+        let vertexSource = geometry.sources(for: SCNGeometrySource.Semantic.vertex).first!
+        let normalSource = geometry.sources(for: SCNGeometrySource.Semantic.normal).first!
 
         let vertexCount = vertexSource.vectorCount
 
